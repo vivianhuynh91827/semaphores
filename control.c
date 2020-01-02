@@ -97,12 +97,18 @@ int main(int argc, char * argv[]) {
       printf("The story so far:\n");
       char story[10000];
       int bytes = read(fd, story, sizeof(story));
-      if (numbers < 0){
+      if (bytes < 0){
         printf("Reading file errno: %d\nerror: %s\n",errno, strerror(errno));
         return 0;
       }
-      close(input);
       printf("%s\n", story)
     }
   }
+  else if (argc == 1){
+    printf("Argument needed\n");
+  }
+  else if (argc > 2){
+    printf("Too many arguments\n");
+  }
+  return 0;
 }
