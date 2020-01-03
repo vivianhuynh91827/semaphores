@@ -12,4 +12,5 @@ clean:
 	rm *.o
 	rm control
 	rm write
+	rm test
 	rm *~

@@ -100,7 +100,7 @@ int main(int argc, char * argv[]) {
   int semd;
   int shmd;
   int fd;
-  if (argc > 1) {
+  if (argc == 2) {
     if(strcmp(argv[1], "-c") == 0) {
       semd = crt_sem();
       shmd = crt_shm();
